@@ -2,7 +2,9 @@
     <div class="app-contentbody">
         <!-- header -->
         <mt-header fixed title="固定在顶部"></mt-header>
-gb
+
+		<router-view></router-view>
+		
         <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
