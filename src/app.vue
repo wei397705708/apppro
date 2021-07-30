@@ -1,7 +1,7 @@
 <template>
     <div class="app-contentbody">
         <!-- header -->
-        <mt-header fixed title="固定在顶部"></mt-header>
+        <mt-header fixed title="首页"></mt-header>
 
 		<transition>
 			<router-view></router-view>
