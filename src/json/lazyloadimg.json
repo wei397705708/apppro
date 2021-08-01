@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "src": "../../images/lazyload/lazyimg01.jpeg"
+    },
+    {
+        "id": 2,
+        "src": "../../images/lazyload/lazyimg02.jpeg"
+    },
+    {
+        "id": 3,
+        "src": "../../images/lazyload/lazyimg03.jpeg"
+    },
+    {
+        "id": 4,
+        "src": "../../images/lazyload/lazyimg04.jpeg"
+    },
+    {
+        "id": 5,
+        "src": "../../images/lazyload/lazyimg05.jpeg"
+    },
+    {
+        "id": 6,
+        "src": "../../images/lazyload/lazyimg06.jpeg"
+    }
+]
