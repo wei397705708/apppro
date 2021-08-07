@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="comment_body">
     <div>发表评论</div>
     <div class="mui-input-row" style="margin: 10px 5px">
       <textarea
         class="fontsize_12"
         id="textarea"
         rows="5"
-        placeholder="多行文本框"
+        placeholder="请输入评论内容"
         v-model="msg"
       ></textarea>
     </div>
@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style lang="less">
+.comment_body{
+  padding-bottom: 20px;
+}
 .fontsize_14 {
   font-size: 14px !important;
 }

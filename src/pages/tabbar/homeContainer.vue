@@ -1,10 +1,7 @@
 <template>
   <div class="home_swipe_body">
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in src" :key="item.key">
-        <img class="swipe_img" :src="item.src" alt="" />
-      </mt-swipe-item>
-    </mt-swipe>
+    <!-- 轮播图位置 -->
+    <scrollimg :imagesrc="src" :isfull="false"></scrollimg>
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <router-link to="/home/newslist">
@@ -24,12 +21,12 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/goodslist">
           <span class="mui-icon">
               <img class="grid_iconimg" src="../../images/shopcar.png" alt="">
           </span>
-          <div class="mui-media-body">商品购买</div></a
-        >
+          <div class="mui-media-body">商品购买</div>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -62,7 +59,11 @@
 
 <script>
 import imgsrc from "../../json/img.json";
+import scrollimg from "../common/scrollimg.vue";
 export default {
+  components:{
+    scrollimg,
+  },
   data() {
     return {
       src: imgsrc,
@@ -97,10 +98,7 @@ export default {
       }
     }
   }
-  .swipe_img {
-    width: 100%;
-    height: 100%;
-  }
+  
   .grid_iconimg{
       width: 60px;
   }

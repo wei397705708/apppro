@@ -17,7 +17,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-itemp" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span id="muibadge" class="mui-badge">9</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-itemp" to="/search">
@@ -37,6 +37,7 @@
     padding-top: 40px;
 	padding-bottom: 50px;
 	overflow-x: hidden;
+	background-color: #fff;
 }
 .v-enter{
 	opacity: 0;

@@ -11,6 +11,7 @@ import "./lib/css/lazyload.vue.css";
 import "mint-ui/lib/style.css";
 import "./lib/css/mui.min.css";
 import "./lib/css/icons-extra.css";
+import "./css/style.less";
 
 Vue.use(VueRouter);
 Vue.use(Mint);
@@ -31,6 +32,7 @@ let vm = new Vue({
     router,
     // render: c => c(app),
     render(c){
+        
         return c(app);
     },
 });
