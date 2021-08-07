@@ -17,7 +17,7 @@
                     <span>市场价：</span>
                     <span class="goodsinfo_scjiagenum">￥2322</span>
                     <span class="margin_left_20">预售价：</span>
-                    <span class="goodsinfo_ysjiagenum">￥1989</span>
+                    <span class="goodsinfo_ysjiagenum">￥{{price}}</span>
                 </div>
                 <div class="display_flex goodsinfo_jiage goodsinfo_gmnumbox position_relative">
                     <span class="goodsinfo_gmtitle">购买数量：</span>
@@ -78,8 +78,9 @@ export default {
             src: imgsrc,
             id: this.$route.params.infoid,
             ballflag: false,
-            goodsnum: null,
+            goodsnum: 1,
             maxn: 99,
+            price: 1989,
         };
     },
     methods:{
@@ -91,6 +92,13 @@ export default {
         },
         anim(){
             this.ballflag = !this.ballflag;
+            let goodsinfostr = {
+                id: this.id,
+                count: parseInt(this.goodsnum),
+                price: this.price,
+                selected: true
+            };
+            this.$store.commit('getinfos',goodsinfostr);
         },
         beforeEnter(el){
             el.style.transform = "translate(0, 0)";

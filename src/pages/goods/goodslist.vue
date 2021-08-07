@@ -94,6 +94,9 @@ export default {
         goodsinfo(id){
             this.$router.push({ name: 'goodsinfo', params: {infoid: id} });
         }
+    },
+    mounted(){
+        
     }
 };
 </script>

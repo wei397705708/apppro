@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         getcountnum(){
-            let inputn = this.$refs.inputN.value;
+            let inputn = parseInt(this.$refs.inputN.value);
             this.$emit('getcountnum',inputn);
         },
     },
@@ -28,7 +28,7 @@ export default {
     },
     watch: {
         maxFnum: function(newVal,oldVal){
-            mui('.mui-numbox').numbox().setOption('max',newVal);
+            mui('.mui-numbox').numbox().setOption('max',parseInt(newVal));
         }
     },
     props:['maxFnum'],
