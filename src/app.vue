@@ -1,7 +1,11 @@
 <template>
     <div class="app-contentbody">
         <!-- header -->
-        <mt-header fixed title="首页"></mt-header>
+        <mt-header fixed title="首页">
+			<span slot="left" @click="callbackfn">
+				<mt-button icon="back" v-show="flag">返回</mt-button>
+			</span>
+		</mt-header>
 
 		<transition>
 			<router-view></router-view>
@@ -13,23 +17,48 @@
 				<span class="mui-tab-label">首页</span>
 			</router-link>
 			<router-link class="mui-tab-itemp" to="/menbar">
-				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-icon mui-icon-star"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-itemp" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span id="muibadge" class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+					<span id="muibadge" class="mui-badge">{{$store.getters.getCountNum}}</span>
+				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-itemp" to="/search">
-				<span class="mui-icon mui-icon-search"></span>
-				<span class="mui-tab-label">搜索</span>
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我的</span>
 			</router-link>
 		</nav>
     </div>
 </template>
 
 <script>
-
+export default {
+	data(){
+		return {
+			flag: true,
+		}
+	},
+	created(){
+		this.flag = this.$route.path == "/home"?false:true;
+	},
+	methods: {
+		callbackfn(){
+			this.$router.go(-1);
+		},
+	},
+	watch : {
+		"$route.path": function(newvalue){
+			if(newvalue == '/home'){
+				this.flag = false;
+			}else {
+				this.flag = true;
+			}
+		},
+	},
+}
 </script>
 
 <style lang="scss" scoped>

@@ -27,10 +27,12 @@ Vue.http.options.emulateJSON = true;
 Vue.filter('dateFormat',function(datastr,pattern = "YYYY-MM-DD HH:mm:ss"){
     return moment(datastr).format(pattern);
 });
-
+function lStorage(){
+    return JSON.parse(localStorage.getItem('car')) || [];
+};
 let store = new Vuex.Store({
     state:{
-        car: [],
+        car: lStorage(),
     },
     mutations:{
         getinfos: function(state,goodsinfo){
@@ -43,11 +45,68 @@ let store = new Vuex.Store({
             if(!flag){
                 state.car.push(goodsinfo);
             }
+            // 把数据存储到本地
+            localStorage.setItem('car',JSON.stringify(state.car));
             // console.log(state.car);
+        },
+        updateNumFn(state,goodsmsg){
+            state.car.some(item=>{
+                if(item.id === goodsmsg.id){
+                    item.count = parseInt(goodsmsg.count);
+                    return true;
+                }
+            });
+            console.log(state.car);
+            localStorage.setItem('car',JSON.stringify(state.car));
+        },
+        deletegoods(state,id){
+            state.car.some((item,index)=>{
+                if(item.id == id){
+                    state.car.splice(index,1);
+                    return true;
+                };
+            });
+            localStorage.setItem('car',JSON.stringify(state.car));
+        },
+        changeSwitchState(state,options){
+            state.car.some(item=>{
+                if(item.id == options.id){
+                    item.selected = options.selected;
+                    return true;
+                }
+            });
+            localStorage.setItem('car',JSON.stringify(state.car));
         },
     },
     getters:{
-
+        getCountNum(state){
+            let count = 0;
+            state.car.forEach(item=>{
+                count += item.count;
+            });
+            return count;
+        },
+        selectedState(state){
+            var obj = {};
+            state.car.forEach((item)=>{
+                obj[item.id] = item.selected;
+            });
+            return obj;
+        },
+        sumNum(state){
+            let numobj = {};
+            let price = 0;
+            let count = 0;
+            state.car.forEach(item=>{
+                if(item.selected){
+                    price += item.price*item.count;
+                    count += item.count;
+                }
+            });
+            numobj.count = count;
+            numobj.price = price;
+            return numobj;
+        },
     }
 });
 

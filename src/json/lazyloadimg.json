@@ -1,26 +1,26 @@
 [
     {
-        "id": 0,
-        "src": "../../images/lazyload/lazyimg01.jpeg"
+        "id": 1,
+        "src": "../../images/lazyload/lazyimg1.jpeg"
     },
     {
         "id": 2,
-        "src": "../../images/lazyload/lazyimg02.jpeg"
+        "src": "../../images/lazyload/lazyimg2.jpeg"
     },
     {
         "id": 3,
-        "src": "../../images/lazyload/lazyimg03.jpeg"
+        "src": "../../images/lazyload/lazyimg3.jpeg"
     },
     {
         "id": 4,
-        "src": "../../images/lazyload/lazyimg04.jpeg"
+        "src": "../../images/lazyload/lazyimg4.jpeg"
     },
     {
         "id": 5,
-        "src": "../../images/lazyload/lazyimg05.jpeg"
+        "src": "../../images/lazyload/lazyimg5.jpeg"
     },
     {
         "id": 6,
-        "src": "../../images/lazyload/lazyimg06.jpeg"
+        "src": "../../images/lazyload/lazyimg6.jpeg"
     }
 ]

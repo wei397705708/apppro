@@ -13,7 +13,7 @@
         </router-link>
     </li>
     <li class="mui-table-view-cell mui-media">
-        <a href="javascript:;">
+        <router-link to="/home/newsinfo/2" tag="span">
             <img class="mui-media-object mui-pull-left" src="../../images/img01.png"/>
             <div class="mui-media-body">
                 <h3 class="newslist_title">幸福</h3>
@@ -22,10 +22,10 @@
                     <span class="newslit_time">点击次数：0次</span>
                 </p>
             </div>
-        </a>
+        </router-link>
     </li>
     <li class="mui-table-view-cell mui-media">
-        <a href="javascript:;">
+        <router-link to="/home/newsinfo/3">
             <img class="mui-media-object mui-pull-left" src="../../images/img01.png"/>
             <div class="mui-media-body">
                 <h3 class="newslist_title">幸福</h3>
@@ -34,7 +34,7 @@
                     <span class="newslit_time">点击次数：0次</span>
                 </p>
             </div>
-        </a>
+        </router-link>
     </li>
   </ul>
 </template>

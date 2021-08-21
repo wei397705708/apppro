@@ -2,7 +2,7 @@
    <ul class="mui-table-view mui-grid-view goodslist_body ">
     <li class="mui-table-view-cell mui-media mui-col-xs-6">
         <a @click="goodsinfo(id[0])">
-            <img class="mui-media-object" src="../../images/lazyload/lazyimg03.jpeg" />
+            <img class="mui-media-object" src="../../images/lazyload/lazyimg1.jpeg" />
             <div class="mui-media-body">金三顺寿司金三顺寿司金三顺寿司金三顺寿司金三顺寿司</div>
             <div class="goodslist_jia_box">
                 <div class="goodslist_jia_list">
@@ -18,7 +18,7 @@
     </li>
     <li class="mui-table-view-cell mui-media mui-col-xs-6">
       <a @click="goodsinfo(id[1])">
-        <img class="mui-media-object" src="../../images/lazyload/lazyimg04.jpeg" />
+        <img class="mui-media-object" src="../../images/lazyload/lazyimg2.jpeg" />
         <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
         <div class="goodslist_jia_box">
             <div class="goodslist_jia_list">
@@ -32,7 +32,7 @@
         </div></a>
     </li>
     <li class="mui-table-view-cell mui-media mui-col-xs-6">
-      <a @click="goodsinfo(id[2])"><img class="mui-media-object" src="../../images/lazyload/lazyimg02.jpeg" />
+      <a @click="goodsinfo(id[2])"><img class="mui-media-object" src="../../images/lazyload/lazyimg3.jpeg" />
         <div class="mui-media-body">Color of SIP CBD</div>
         <div class="goodslist_jia_box">
             <div class="goodslist_jia_list">
@@ -48,7 +48,7 @@
     </li>
     <li class="mui-table-view-cell mui-media mui-col-xs-6">
       <a @click="goodsinfo(id[3])">
-        <img class="mui-media-object" src="../../images/lazyload/lazyimg02.jpeg" />
+        <img class="mui-media-object" src="../../images/lazyload/lazyimg4.jpeg" />
         <div class="mui-media-body">静静看这世界</div>
         <div class="goodslist_jia_box">
             <div class="goodslist_jia_list">
@@ -64,7 +64,7 @@
     </li>
     <li class="mui-table-view-cell mui-media mui-col-xs-6">
       <a @click="goodsinfo(id[4])">
-        <img class="mui-media-object" src="../../images/lazyload/lazyimg03.jpeg" />
+        <img class="mui-media-object" src="../../images/lazyload/lazyimg5.jpeg" />
         <div class="mui-media-body">金三顺寿司金三顺寿司金三顺寿司金三顺寿司金三顺寿司</div>
         <div class="goodslist_jia_box">
             <div class="goodslist_jia_list">
@@ -87,7 +87,7 @@
 export default {
     data(){
         return{
-            id: [0,1,2,3,4]
+            id: [1,2,3,4,5,6]
         }
     },
     methods: {

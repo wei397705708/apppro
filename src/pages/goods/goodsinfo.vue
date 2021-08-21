@@ -81,6 +81,7 @@ export default {
             goodsnum: 1,
             maxn: 99,
             price: 1989,
+            onoff: true,
         };
     },
     methods:{
@@ -91,14 +92,19 @@ export default {
             this.$router.push({name: 'goodscomment', params: {cmid: id} });
         },
         anim(){
-            this.ballflag = !this.ballflag;
-            let goodsinfostr = {
-                id: this.id,
-                count: parseInt(this.goodsnum),
-                price: this.price,
-                selected: true
-            };
-            this.$store.commit('getinfos',goodsinfostr);
+            if(this.onoff){
+                this.onoff = false;
+                this.ballflag = !this.ballflag;
+                let goodsinfostr = {
+                    id: this.id,
+                    count: parseInt(this.goodsnum),
+                    price: this.price,
+                    selected: true
+                };
+                this.$store.commit('getinfos',goodsinfostr);
+                
+            }
+            
         },
         beforeEnter(el){
             el.style.transform = "translate(0, 0)";
@@ -115,6 +121,7 @@ export default {
         },
         afterEnter(el){
             this.ballflag = !this.ballflag;
+            this.onoff = true;
         },
         countnum(num){
             this.goodsnum = num;

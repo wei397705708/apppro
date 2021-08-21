@@ -1,5 +1,21 @@
+@colorWhite: #fff;
+@fontSize12: 12px;
+@fontSize14: 14px;
+@fontColorRed: rgb(244, 59, 59);
+@fontColorBlue: rgb(51, 93, 232);
+
+.contbody_height{
+    height: calc(100vh - 90px);
+    overflow-y: auto;
+}
+.background_color_white{
+    background-color: @colorWhite;
+}
 .display_flex{
     display: flex;
+}
+.align_items_center{
+    align-items: center;
 }
 .goodsinfo_jiage{
     padding: 10px;
@@ -8,7 +24,7 @@
         color: #646464;
     }
     .goodsinfo_ysjiagenum{
-        color: rgb(244, 59, 59);
+        color: @fontColorRed;
         font-size: 14px;
     }
 }
@@ -47,7 +63,7 @@
     width: 150px;
 }
 .font_size_12{
-    font-size: 12px;
+    font-size: @fontSize12;
 }
 .goodsinfo_footer{
     display: block;
@@ -55,4 +71,40 @@
         margin-top: 10px;
     }
 }
-
+.car_goodsimg{
+    width: 50px;
+    img{
+        width: 100%;
+    }
+}
+.goodscar_title{
+    font-size: @fontSize14;
+}
+.goodscar_title_jiage{
+    color: @fontColorRed;
+    width: 40px;
+}
+.goodscar_title_scbtn{
+    color: @fontColorBlue;
+    width: 34px;
+    margin-left: 4px;
+}
+.goodsinfo_imgcontent {
+    justify-content: space-between;
+    .goodsinfo_zongjia {
+        
+        p{
+            font-size: 12px;
+            color: #646464;
+            span{
+                font-size: 14px;
+                color: @fontColorRed;
+            }
+        }
+    }
+}
+.newsinfo_cont 
+figure a{
+    display: block;
+    text-align: center;
+}
