@@ -36,10 +36,9 @@
 </script>
 
 <style lang="scss" scoped>
-.mui-navigate-right{
-    font-size: 12px;;
-}
 
-
+    .mui-navigate-right{
+        font-size: 12px;
+    }
 
 </style>
