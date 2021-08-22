@@ -39,4 +39,7 @@
 .mui-navigate-right{
     font-size: 12px;;
 }
+
+
+
 </style>
